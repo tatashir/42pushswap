@@ -1,22 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   finish_error.c                                     :+:      :+:    :+:   */
+/*   error_exit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tkirihar <tkirihar@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*   By: tatashir <tatashir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/09 22:12:11 by tkirihar          #+#    #+#             */
-/*   Updated: 2021/12/18 00:57:57 by tkirihar         ###   ########.fr       */
+/*   Created: 2023/05/30 17:55:05 by tatashir          #+#    #+#             */
+/*   Updated: 2023/06/06 23:26:42 by tatashir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-// エラーの際に正常に終了させる関数
-int	finish_error(t_stack *stack_a, t_stack *stack_b)
+int	error_exit(t_stack *a, t_stack *b)
 {
-	ft_putendl_fd("Error", STDERR_FILENO);
-	free(stack_a->num);
-	free(stack_b->num);
+	ft_putendl_fd("Error", 2);
+	free(a->num);
+	free(b->num);
 	exit(1);
 }

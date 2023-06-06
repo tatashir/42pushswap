@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   A_to_B.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tkirihar <tkirihar@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*   By: tatashir <tatashir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/08 17:17:40 by tkirihar          #+#    #+#             */
-/*   Updated: 2021/12/18 00:56:27 by tkirihar         ###   ########.fr       */
+/*   Updated: 2023/06/06 23:25:36 by tatashir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ void	A_to_B(size_t sort_size, t_stack *stack_a, t_stack *stack_b)
 	if (check_sort_A_to_B(stack_a, sort_size))
 		return ;
 	if (search_pivot(stack_a, sort_size, &pivot1, &pivot2))
-		finish_error(stack_a, stack_b);
+		error_exit(stack_a, stack_b);
 	init_count(&count);
 	while (sort_size > 0)
 	{

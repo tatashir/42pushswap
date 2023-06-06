@@ -6,7 +6,7 @@
 /*   By: tatashir <tatashir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/08 15:58:28 by tkirihar          #+#    #+#             */
-/*   Updated: 2023/06/06 23:18:06 by tatashir         ###   ########.fr       */
+/*   Updated: 2023/06/06 23:23:40 by tatashir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -121,8 +121,7 @@ void	rrotate(t_stack *stack, char *message);
 void	rotate_ab(t_stack *stack_a, t_stack *stack_b);
 void	rrotate_ab(t_stack *stack_a, t_stack *stack_b);
 
-/* finish_error */
-
-int		finish_error(t_stack *stack_a, t_stack *stack_b);
+// errorexit
+int		error_exit(t_stack *a, t_stack *b);
 
 #endif

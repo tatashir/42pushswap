@@ -6,11 +6,11 @@
 #    By: tatashir <tatashir@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/12/08 15:58:34 by tkirihar          #+#    #+#              #
-#    Updated: 2023/06/06 23:17:35 by tatashir         ###   ########.fr        #
+#    Updated: 2023/06/06 23:25:26 by tatashir         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = 		push_swap
+NAME = 	push_swap
 
 SRCS = 	./srcs/main.c \
 		./srcs/atob_case1.c\
@@ -32,7 +32,7 @@ SRCS = 	./srcs/main.c \
 		./srcs/command_push.c \
 		./srcs/command_rotate.c \
 		./srcs/command_swap.c \
-		./srcs/finish_error.c \
+		./srcs/error_exit.c \
 		./srcs/init_count.c \
 		./srcs/init_stack.c \
 		./srcs/reset_stack.c \
