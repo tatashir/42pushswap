@@ -3,14 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tkirihar <tkirihar@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*   By: tatashir <tatashir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/08 16:06:16 by tkirihar          #+#    #+#             */
-/*   Updated: 2021/12/08 16:06:17 by tkirihar         ###   ########.fr       */
+/*   Created: 2022/10/06 22:26:57 by tatashir          #+#    #+#             */
+/*   Updated: 2022/10/06 22:52:33 by tatashir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isascii(char c)
+#include "libft.h"
+
+int	ft_isascii(int c)
 {
 	return (0 <= c && c <= 127);
 }

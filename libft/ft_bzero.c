@@ -3,23 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tkirihar <tkirihar@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*   By: tatashir <tatashir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/08 16:06:07 by tkirihar          #+#    #+#             */
-/*   Updated: 2021/12/08 16:06:08 by tkirihar         ###   ########.fr       */
+/*   Created: 2022/10/08 07:16:45 by tatashir          #+#    #+#             */
+/*   Updated: 2022/10/19 14:32:26 by tatashir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t len)
+void	ft_bzero(void *s, size_t n)
 {
-	char	*p;
-	size_t	i;
-
-	i = 0;
-	p = (char *)s;
-	while (len-- > 0)
-		p[i++] = '\0';
-	return ;
+	ft_memset(s, 0, n);
 }
