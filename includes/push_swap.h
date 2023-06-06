@@ -6,7 +6,7 @@
 /*   By: tatashir <tatashir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/08 15:58:28 by tkirihar          #+#    #+#             */
-/*   Updated: 2023/06/06 23:30:18 by tatashir         ###   ########.fr       */
+/*   Updated: 2023/06/06 23:33:38 by tatashir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,9 +33,8 @@ typedef struct s_count
 	size_t	pb;
 }	t_count;
 
-/* check_arg */
-
-bool	check_arg(int ac, char **av);
+// check_arg
+bool	check_arg(int argc, char **argv);
 
 /* init_stack */
 
