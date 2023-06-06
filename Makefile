@@ -6,7 +6,7 @@
 #    By: tatashir <tatashir@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/12/08 15:58:34 by tkirihar          #+#    #+#              #
-#    Updated: 2023/06/06 23:25:26 by tatashir         ###   ########.fr        #
+#    Updated: 2023/06/06 23:30:29 by tatashir         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,7 +28,7 @@ SRCS = 	./srcs/main.c \
 		./srcs/btoa_case6.c\
 		./srcs/check_arg.c \
 		./srcs/check_sort.c \
-		./srcs/check_three_sort.c \
+		./srcs/check_3sort.c \
 		./srcs/command_push.c \
 		./srcs/command_rotate.c \
 		./srcs/command_swap.c \
