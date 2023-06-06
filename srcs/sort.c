@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sort.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tkirihar <tkirihar@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*   By: tatashir <tatashir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/08 15:58:21 by tkirihar          #+#    #+#             */
-/*   Updated: 2021/12/18 00:47:24 by tkirihar         ###   ########.fr       */
+/*   Updated: 2023/06/06 23:59:42 by tatashir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ static void	short_sort(int sort_size, t_stack *stack_a)
 			"sa");
 	}
 	else
-		three_sort(stack_a);
+		sort_3elem(stack_a);
 }
 
 // sort_sizeが4以上6以下のソートを行う関数
@@ -44,7 +44,7 @@ static void	medium_sort(t_stack *stack_a, t_stack *stack_b)
 		}
 		push(stack_b, stack_a, "pb");
 	}
-	three_sort(stack_a);
+	sort_3elem(stack_a);
 	while (stack_b->top > 0)
 		push(stack_a, stack_b, "pa");
 }

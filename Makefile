@@ -6,7 +6,7 @@
 #    By: tatashir <tatashir@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/12/08 15:58:34 by tkirihar          #+#    #+#              #
-#    Updated: 2023/06/06 23:30:29 by tatashir         ###   ########.fr        #
+#    Updated: 2023/06/06 23:57:04 by tatashir         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,7 +40,7 @@ SRCS = 	./srcs/main.c \
 		./srcs/search_pivot.c \
 		./srcs/short_sort.c \
 		./srcs/sort.c \
-		./srcs/three_sort.c
+		./srcs/sort_3elem.c
 
 OBJS = 		$(SRCS:.c=.o)
 

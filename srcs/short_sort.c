@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   short_sort.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tkirihar <tkirihar@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*   By: tatashir <tatashir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/12 05:08:04 by tkirihar          #+#    #+#             */
-/*   Updated: 2021/12/18 01:11:53 by tkirihar         ###   ########.fr       */
+/*   Updated: 2023/06/06 23:59:23 by tatashir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void	short_sort_A_to_B(size_t sort_size, t_stack *stack_a)
 	}
 	if (sort_size == 3)
 	{
-		three_sort_A_to_B(stack_a);
+		atob_sort3case(stack_a);
 		return ;
 	}
 }
@@ -50,7 +50,7 @@ void	short_sort_B_to_A(size_t sort_size, t_stack *stack_b, t_stack *stack_a)
 	}
 	if (sort_size == 3)
 	{
-		three_sort_B_to_A(stack_b, stack_a);
+		btoa_sort3case(stack_b, stack_a);
 		return ;
 	}
 }
