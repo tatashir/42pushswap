@@ -6,7 +6,7 @@
 /*   By: tatashir <tatashir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/08 15:58:23 by tkirihar          #+#    #+#             */
-/*   Updated: 2023/06/06 22:56:30 by tatashir         ###   ########.fr       */
+/*   Updated: 2023/06/06 23:18:44 by tatashir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,20 +73,20 @@ void	three_sort_B_to_A(t_stack *stack_b, t_stack *stack_a)
 	n2 = stack_b->top - 1;
 	n3 = stack_b->top - 2;
 	if (check_three_sort(stack_b->num[n3], stack_b->num[n1], stack_b->num[n2]))
-		B_to_A_command_case1(stack_b, stack_a, n1, n2);
+		btoa_case1(stack_b, stack_a, n1, n2);
 	else if (check_three_sort(stack_b->num[n2], stack_b->num[n1],
 			stack_b->num[n3]))
-		B_to_A_command_case2(stack_b, stack_a, n1, n2);
+		btoa_case2(stack_b, stack_a, n1, n2);
 	else if (check_three_sort(stack_b->num[n2], stack_b->num[n3],
 			stack_b->num[n1]))
-		B_to_A_command_case3(stack_b, stack_a, n1, n2);
+		btoa_case3(stack_b, stack_a, n1, n2);
 	else if (check_three_sort(stack_b->num[n1], stack_b->num[n2],
 			stack_b->num[n3]))
-		B_to_A_command_case4(stack_b, stack_a, n1, n2);
+		btoa_case4(stack_b, stack_a, n1, n2);
 	else if (check_three_sort(stack_b->num[n1], stack_b->num[n3],
 			stack_b->num[n2]))
-		B_to_A_command_case5(stack_b, stack_a);
+		btoa_case5(stack_b, stack_a);
 	else if (check_three_sort(stack_b->num[n3], stack_b->num[n2],
 			stack_b->num[n1]))
-		B_to_A_command_case6(stack_b, stack_a);
+		btoa_case6(stack_b, stack_a);
 }

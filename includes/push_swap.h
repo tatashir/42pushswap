@@ -6,7 +6,7 @@
 /*   By: tatashir <tatashir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/08 15:58:28 by tkirihar          #+#    #+#             */
-/*   Updated: 2023/06/06 23:05:03 by tatashir         ###   ########.fr       */
+/*   Updated: 2023/06/06 23:18:06 by tatashir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,23 +69,16 @@ void	atob_case2(t_stack *s, size_t n1, size_t n2);
 void	atob_case3(t_stack *s, size_t n1, size_t n2);
 void	atob_case4(t_stack *s, size_t n1, size_t n2);
 void	atob_case5(t_stack *s, size_t n1, size_t n2);
+void	btoa_case1(t_stack *b, t_stack *a, size_t n1, size_t n2);
+void	btoa_case2(t_stack *b, t_stack *a, size_t n1, size_t n2);
+void	btoa_case3(t_stack *b, t_stack *a, size_t n1, size_t n2);
+void	btoa_case4(t_stack *b, t_stack *a, size_t n1, size_t n2);
+void	btoa_case5(t_stack *b, t_stack *a);
+void	btoa_case6(t_stack *b, t_stack *a);
 
 /* B_to_A */
 
 void	B_to_A(size_t sort_size, t_stack *stack_b, t_stack *stack_a);
-
-/* B_to_A_command_case */
-
-void	B_to_A_command_case1(t_stack *stack_b, t_stack *stack_a, \
-size_t n1, size_t n2);
-void	B_to_A_command_case2(t_stack *stack_b, t_stack *stack_a, \
-size_t n1, size_t n2);
-void	B_to_A_command_case3(t_stack *stack_b, t_stack *stack_a, \
-size_t n1, size_t n2);
-void	B_to_A_command_case4(t_stack *stack_b, t_stack *stack_a, \
-size_t n1, size_t n2);
-void	B_to_A_command_case5(t_stack *stack_b, t_stack *stack_a);
-void	B_to_A_command_case6(t_stack *stack_b, t_stack *stack_a);
 
 /* short_sort */
 
