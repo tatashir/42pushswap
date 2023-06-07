@@ -6,7 +6,7 @@
 /*   By: tatashir <tatashir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/24 20:46:56 by tatashir          #+#    #+#             */
-/*   Updated: 2023/06/07 19:53:25 by tatashir         ###   ########.fr       */
+/*   Updated: 2023/06/07 20:19:27 by tatashir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,8 +47,8 @@ static void	stack_elem(t_stack *a, t_stack *b, size_t sortsize, t_count c)
 {
 	restore_stack(a, b, (ssize_t)c.ra, (ssize_t)c.rb);
 	fromatob(c.ra + sortsize, a, b);
-	B_to_A(c.rb, b, a);
-	B_to_A(c.pb - c.rb, b, a);
+	frombtoa(c.rb, b, a);
+	frombtoa(c.pb - c.rb, b, a);
 }
 
 void	fromatob(size_t sortsize, t_stack *a, t_stack *b)
@@ -61,7 +61,7 @@ void	fromatob(size_t sortsize, t_stack *a, t_stack *b)
 		return ;
 	if (find_pivot(a, sortsize, &pivot1, &pivot2))
 		error_exit(a, b);
-	init_count(&count);
+	cmd_count(&count);
 	while (1)
 	{
 		if (pivot2 <= a->num[a->top])

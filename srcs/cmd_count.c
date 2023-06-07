@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   command_cound.c                                    :+:      :+:    :+:   */
+/*   cmd_count.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tatashir <tatashir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/24 15:23:13 by tatashir          #+#    #+#             */
-/*   Updated: 2023/06/07 20:14:43 by tatashir         ###   ########.fr       */
+/*   Updated: 2023/06/07 20:22:04 by tatashir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-void	init_count(t_count *count)
+void	cmd_count(t_count *count)
 {
 	count->ra = 0;
 	count->rb = 0;

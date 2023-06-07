@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: tatashir <tatashir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/08 15:58:28 by tkirihar          #+#    #+#             */
-/*   Updated: 2023/06/07 19:54:12 by tatashir         ###   ########.fr       */
+/*   Created: 2023/05/24 15:26:23 by tatashir          #+#    #+#             */
+/*   Updated: 2023/06/07 20:20:06 by tatashir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,32 +32,13 @@ typedef struct s_count
 	size_t	pa;
 	size_t	pb;
 }	t_count;
-
-// check_arg
-bool	check_arg(int argc, char **argv);
-
-// initstack
-int		init_stack(t_stack *a, t_stack *b, int argc, char **argv);
-
-// sort
-//static void	sort_under3(int args, t_stack *a);
-//static void	sort_under6(t_stack *a, t_stack *b);
-//static void sort_large(int size, t_stack *a, t_stack *b);
-void	sort(int num, t_stack *a, t_stack *b);
-
-// sort3elem
-void	sort_3elem(t_stack *a);
-void	atob_sort3case(t_stack *s);
-void	btoa_sort3case(t_stack *a, t_stack *b);
-
-// check_3sort
-bool	check_3sort(int s, int m, int l);
-
-// getmin
-size_t	get_min(t_stack *a);
-
-// fromatob
-void	fromatob(size_t size, t_stack *a, t_stack *b);
+	// size_t	rra;
+	// size_t	rrb;
+	// size_t	rr;
+	// size_t	rrr;
+	// size_t	sa;
+	// size_t	sb;
+	// size_t	ss;
 
 // atob,btoa
 void	atob_case1(t_stack *s, size_t n1, size_t n2);
@@ -72,13 +53,11 @@ void	btoa_case4(t_stack *b, t_stack *a, size_t n1, size_t n2);
 void	btoa_case5(t_stack *b, t_stack *a);
 void	btoa_case6(t_stack *b, t_stack *a);
 
-/* B_to_A */
+// check_3sort
+bool	check_3sort(int s, int m, int l);
 
-void	B_to_A(size_t sort_size, t_stack *stack_b, t_stack *stack_a);
-
-// sortsmall
-void	sort_stack_a(size_t size, t_stack *s);
-void	sort_stackbtoa(size_t size, t_stack *a, t_stack *b);
+// check_arg
+bool	check_arg(int argc, char **argv);
 
 // check_sort
 bool	check_sort(t_stack *a);
@@ -86,17 +65,6 @@ bool	check_aissorted(t_stack *s, size_t size);
 
 //static void	pushtoA(t_stack *a, t_stack *b, size_t pushsize);
 bool	check_b_issorted(t_stack *a, t_stack *b, size_t size);
-
-///restore_stack
-void	restore_stack(t_stack *a, t_stack *b, ssize_t countra, ssize_t countrb);
-
-//init_count
-void	init_count(t_count *c);
-
-// findpivot
-//static void	swap_lr(int *l, int *r);
-//static void	quick_sort(int *n, ssize_t l, ssize_t r);
-int		find_pivot(t_stack *s, size_t size, int *pivot1, int *pivot2);
 
 //cmd
 void	push(t_stack *a, t_stack *b, char *m);
@@ -107,7 +75,52 @@ void	rrotate_ab(t_stack *a, t_stack *b);
 void	swap(int *n1, int *n2, char *m);
 void	swap_ab(t_stack *a, t_stack *b);
 
+// cmdcount
+void	cmd_count(t_count *c);
+
 // errorexit
 int		error_exit(t_stack *a, t_stack *b);
+
+// findpivot
+//static void	swap_lr(int *l, int *r);
+//static void	quick_sort(int *n, ssize_t l, ssize_t r);
+int		find_pivot(t_stack *s, size_t size, int *pivot1, int *pivot2);
+
+// fromatob
+void	fromatob(size_t size, t_stack *a, t_stack *b);
+
+// frombtoa
+void	frombtoa(size_t size, t_stack *a, t_stack *b);
+
+// getmin
+size_t	get_min(t_stack *a);
+
+//command_count
+void	command_count(t_count *c);
+
+// initstack
+
+int		init_stack(t_stack *stack_a, t_stack *stack_b, int argc, char **argv);
+
+//restore_stack
+void	restore_stack(t_stack *a, t_stack *b, ssize_t countra, ssize_t countrb);
+
+// sort3elem
+void	sort_3elem(t_stack *a);
+void	atob_sort3case(t_stack *s);
+void	btoa_sort3case(t_stack *a, t_stack *b);
+
+// sortsmall
+void	sort_stack_a(size_t size, t_stack *stack);
+void	sort_stackbtoa(size_t size, t_stack *a, t_stack *b);
+
+// sort
+//static void	sort_under3(int args, t_stack *a);
+//static void	sort_under6(t_stack *a, t_stack *b);
+//static void sort_large(int size, t_stack *a, t_stack *b);
+void	sort(int num, t_stack *a, t_stack *b);
+
+// swap
+//void	swap(int *n1, int *n2);
 
 #endif

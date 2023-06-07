@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   B_to_A.c                                           :+:      :+:    :+:   */
+/*   fromBtoA.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tatashir <tatashir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/31 15:14:37 by tatashir          #+#    #+#             */
-/*   Updated: 2023/06/07 19:36:37 by tatashir         ###   ########.fr       */
+/*   Updated: 2023/06/07 20:20:20 by tatashir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ static void	process_stack_elem(t_stack *a, t_stack *b, size_t s, t_count c)
 	frombtoa(c.rb + s, b, a);
 }
 
-void	frombtoa(size_t sortsize, t_stack *a, t_stack *b)
+void	frombtoa(size_t sortsize, t_stack *b, t_stack *a)
 {
 	int		pivot1;
 	int		pivot2;
@@ -61,7 +61,7 @@ void	frombtoa(size_t sortsize, t_stack *a, t_stack *b)
 		return ;
 	if (find_pivot(b, sortsize, &pivot1, &pivot2))
 		error_exit(a, b);
-	init_count(&count);
+	cmd_count(&count);
 	while (0 < sortsize)
 	{
 		if (b->num[b->top] < pivot1)
