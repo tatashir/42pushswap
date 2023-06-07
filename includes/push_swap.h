@@ -6,7 +6,7 @@
 /*   By: tatashir <tatashir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/08 15:58:28 by tkirihar          #+#    #+#             */
-/*   Updated: 2023/06/07 15:53:05 by tatashir         ###   ########.fr       */
+/*   Updated: 2023/06/07 16:00:14 by tatashir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,10 +86,8 @@ bool	check_sort(t_stack *stack);
 bool	check_sort_A_to_B(t_stack *stack, size_t sort_size);
 bool	check_sort_B_to_A(t_stack *stack_a, t_stack *stack_b, size_t sort_size);
 
-/* reset_stack */
-
-void	reset_stack(t_stack *stack_a, t_stack *stack_b, \
-		ssize_t count_ra, ssize_t count_rb);
+///restore_stack
+void	restore_stack(t_stack *a, t_stack *b, ssize_t countra, ssize_t countrb);
 
 //init_count
 void	init_count(t_count *c);

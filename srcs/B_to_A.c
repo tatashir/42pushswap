@@ -6,7 +6,7 @@
 /*   By: tatashir <tatashir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/08 17:18:03 by tkirihar          #+#    #+#             */
-/*   Updated: 2023/06/06 23:25:57 by tatashir         ###   ########.fr       */
+/*   Updated: 2023/06/07 16:01:19 by tatashir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ static void	recursive_process(t_stack *stack_a, t_stack *stack_b,
 							size_t sort_size, t_count count)
 {
 	A_to_B(count.pa - count.ra, stack_a, stack_b);
-	reset_stack(stack_a, stack_b, (ssize_t)count.ra, (ssize_t)count.rb);
+	restore_stack(stack_a, stack_b, (ssize_t)count.ra, (ssize_t)count.rb);
 	A_to_B(count.ra, stack_a, stack_b);
 	B_to_A(count.rb + sort_size, stack_b, stack_a);
 }

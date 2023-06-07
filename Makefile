@@ -6,7 +6,7 @@
 #    By: tatashir <tatashir@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/12/08 15:58:34 by tkirihar          #+#    #+#              #
-#    Updated: 2023/06/07 15:52:42 by tatashir         ###   ########.fr        #
+#    Updated: 2023/06/07 15:58:47 by tatashir         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,7 +36,7 @@ SRCS = 	./srcs/main.c \
 		./srcs/error_exit.c \
 		./srcs/init_count.c \
 		./srcs/init_stack.c \
-		./srcs/reset_stack.c \
+		./srcs/restore_stack.c \
 		./srcs/search_pivot.c \
 		./srcs/short_sort.c \
 		./srcs/sort.c \

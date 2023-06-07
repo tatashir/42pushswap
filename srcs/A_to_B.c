@@ -6,7 +6,7 @@
 /*   By: tatashir <tatashir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/08 17:17:40 by tkirihar          #+#    #+#             */
-/*   Updated: 2023/06/06 23:25:36 by tatashir         ###   ########.fr       */
+/*   Updated: 2023/06/07 16:00:55 by tatashir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ static bool	check_pivot2_or_more(t_stack *stack, size_t sort_size, int pivot2)
 static void	recursive_process(t_stack *stack_a, t_stack *stack_b,
 							size_t sort_size, t_count count)
 {
-	reset_stack(stack_a, stack_b, (ssize_t)count.ra, (ssize_t)count.rb);
+	restore_stack(stack_a, stack_b, (ssize_t)count.ra, (ssize_t)count.rb);
 	A_to_B(count.ra + sort_size, stack_a, stack_b);
 	B_to_A(count.rb, stack_b, stack_a);
 	B_to_A(count.pb - count.rb, stack_b, stack_a);
