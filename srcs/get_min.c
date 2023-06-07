@@ -3,26 +3,25 @@
 /*                                                        :::      ::::::::   */
 /*   search_min.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tkirihar <tkirihar@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*   By: tatashir <tatashir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/08 15:58:19 by tkirihar          #+#    #+#             */
-/*   Updated: 2021/12/18 00:41:33 by tkirihar         ###   ########.fr       */
+/*   Created: 2023/05/23 19:14:28 by tatashir          #+#    #+#             */
+/*   Updated: 2023/06/07 15:30:54 by tatashir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-// スタックの最小値を探す関数
-size_t	search_min(t_stack *stack)
+size_t	get_min(t_stack *a)
 {
 	size_t	min;
 	size_t	i;
 
 	min = 1;
 	i = 2;
-	while (i <= stack->top)
+	while (i <= a->top)
 	{
-		if (stack->num[i] < stack->num[min])
+		if (a->num[min] > a->num[i])
 			min = i;
 		i++;
 	}

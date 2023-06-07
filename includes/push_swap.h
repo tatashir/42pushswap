@@ -6,7 +6,7 @@
 /*   By: tatashir <tatashir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/08 15:58:28 by tkirihar          #+#    #+#             */
-/*   Updated: 2023/06/06 23:58:33 by tatashir         ###   ########.fr       */
+/*   Updated: 2023/06/07 15:31:25 by tatashir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,9 +52,8 @@ void	btoa_sort3case(t_stack *a, t_stack *b);
 // check_3sort
 bool	check_3sort(int s, int m, int l);
 
-/* search_min */
-
-size_t	search_min(t_stack *stack);
+// getmin
+size_t	get_min(t_stack *a);
 
 /* A_to_B */
 

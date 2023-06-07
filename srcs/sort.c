@@ -6,7 +6,7 @@
 /*   By: tatashir <tatashir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/08 15:58:21 by tkirihar          #+#    #+#             */
-/*   Updated: 2023/06/06 23:59:42 by tatashir         ###   ########.fr       */
+/*   Updated: 2023/06/07 15:32:25 by tatashir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ static void	medium_sort(t_stack *stack_a, t_stack *stack_b)
 		return ;
 	while (stack_a->top > 3)
 	{
-		min = search_min(stack_a);
+		min = get_min(stack_a);
 		while (min != stack_a->top)
 		{
 			rotate(stack_a, "ra");

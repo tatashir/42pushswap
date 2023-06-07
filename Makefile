@@ -6,13 +6,14 @@
 #    By: tatashir <tatashir@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/12/08 15:58:34 by tkirihar          #+#    #+#              #
-#    Updated: 2023/06/06 23:57:04 by tatashir         ###   ########.fr        #
+#    Updated: 2023/06/07 15:32:49 by tatashir         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = 	push_swap
 
 SRCS = 	./srcs/main.c \
+		./srcs/get_min.c \
 		./srcs/atob_case1.c\
 		./srcs/atob_case2.c\
 		./srcs/atob_case3.c\
@@ -36,7 +37,6 @@ SRCS = 	./srcs/main.c \
 		./srcs/init_count.c \
 		./srcs/init_stack.c \
 		./srcs/reset_stack.c \
-		./srcs/search_min.c \
 		./srcs/search_pivot.c \
 		./srcs/short_sort.c \
 		./srcs/sort.c \
