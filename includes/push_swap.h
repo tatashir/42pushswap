@@ -6,7 +6,7 @@
 /*   By: tatashir <tatashir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/08 15:58:28 by tkirihar          #+#    #+#             */
-/*   Updated: 2023/06/07 15:31:25 by tatashir         ###   ########.fr       */
+/*   Updated: 2023/06/07 15:53:05 by tatashir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,9 +36,8 @@ typedef struct s_count
 // check_arg
 bool	check_arg(int argc, char **argv);
 
-/* init_stack */
-
-int		init_stack(t_stack *stack_a, t_stack *stack_b, int ac, char **av);
+// initstack
+int		init_stack(t_stack *stack_a, t_stack *stack_b, int argc, char **argv);
 
 /* sort */
 
@@ -92,30 +91,22 @@ bool	check_sort_B_to_A(t_stack *stack_a, t_stack *stack_b, size_t sort_size);
 void	reset_stack(t_stack *stack_a, t_stack *stack_b, \
 		ssize_t count_ra, ssize_t count_rb);
 
-/* init_count */
-
-void	init_count(t_count *count);
+//init_count
+void	init_count(t_count *c);
 
 /* search_median */
 
 int		search_pivot(t_stack *stack, size_t sort_size, \
 int *pivot1, int *pivot2);
 
-/* command_swap */
-
-void	swap(int *n1, int *n2, char *message);
-void	swap_ab(t_stack *stack_a, t_stack *stack_b);
-
-/* command_push */
-
-void	push(t_stack *push_stack, t_stack *pop_stack, char *message);
-
-/* command_rotate */
-
-void	rotate(t_stack *stack, char *message);
-void	rrotate(t_stack *stack, char *message);
-void	rotate_ab(t_stack *stack_a, t_stack *stack_b);
-void	rrotate_ab(t_stack *stack_a, t_stack *stack_b);
+//cmd
+void	push(t_stack *a, t_stack *b, char *m);
+void	rotate(t_stack *s, char *m);
+void	rrotate(t_stack *s, char *m);
+void	rotate_ab(t_stack *a, t_stack *b);
+void	rrotate_ab(t_stack *a, t_stack *b);
+void	swap(int *n1, int *n2, char *m);
+void	swap_ab(t_stack *a, t_stack *b);
 
 // errorexit
 int		error_exit(t_stack *a, t_stack *b);

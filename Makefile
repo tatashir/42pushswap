@@ -6,7 +6,7 @@
 #    By: tatashir <tatashir@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/12/08 15:58:34 by tkirihar          #+#    #+#              #
-#    Updated: 2023/06/07 15:32:49 by tatashir         ###   ########.fr        #
+#    Updated: 2023/06/07 15:52:42 by tatashir         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,9 +30,9 @@ SRCS = 	./srcs/main.c \
 		./srcs/check_arg.c \
 		./srcs/check_sort.c \
 		./srcs/check_3sort.c \
-		./srcs/command_push.c \
-		./srcs/command_rotate.c \
-		./srcs/command_swap.c \
+		./srcs/cmd_push.c \
+		./srcs/cmd_rotate.c \
+		./srcs/cmd_swap.c \
 		./srcs/error_exit.c \
 		./srcs/init_count.c \
 		./srcs/init_stack.c \
