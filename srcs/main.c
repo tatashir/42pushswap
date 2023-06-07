@@ -3,32 +3,32 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tkirihar <tkirihar@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*   By: tatashir <tatashir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/08 15:57:23 by tkirihar          #+#    #+#             */
-/*   Updated: 2021/12/16 13:22:20 by tkirihar         ###   ########.fr       */
+/*   Created: 2023/05/23 15:36:44 by tatashir          #+#    #+#             */
+/*   Updated: 2023/06/07 20:44:09 by tatashir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-int	main(int ac, char **av)
+int	main(int argc, char **argv)
 {
-	t_stack	stack_a;
-	t_stack	stack_b;
+	t_stack	a;
+	t_stack	b;	
 
-	if (!check_arg(ac, av))
+	if (!check_arg(argc, argv))
 	{
-		ft_putendl_fd("Error", STDERR_FILENO);
+		ft_putendl_fd("Error", 1);
 		exit (1);
 	}
-	if (init_stack(&stack_a, &stack_b, ac, av))
+	if (init_stack(&a, &b, argc, argv))
 	{
-		ft_putendl_fd("Error", STDERR_FILENO);
+		ft_putendl_fd("Error", 2);
 		exit (1);
 	}
-	sort(ac - 1, &stack_a, &stack_b);
-	free(stack_a.num);
-	free(stack_b.num);
-	exit (0);
+	sort(argc - 1, &a, &b);
+	free(a.num);
+	free(b.num);
+	return (0);
 }

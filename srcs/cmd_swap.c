@@ -1,33 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   command_swap.c                                     :+:      :+:    :+:   */
+/*   cmd_swap.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tkirihar <tkirihar@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*   By: tatashir <tatashir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/08 15:58:07 by tkirihar          #+#    #+#             */
-/*   Updated: 2021/12/18 00:59:01 by tkirihar         ###   ########.fr       */
+/*   Created: 2023/06/01 15:57:58 by taichi            #+#    #+#             */
+/*   Updated: 2023/06/07 20:43:07 by tatashir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-// saまたはsbをする関数
-void	swap(int *n1, int *n2, char *message)
+void	swap(int *n1, int *n2, char *m)
 {
 	int	tmp;
 
 	tmp = *n1;
 	*n1 = *n2;
 	*n2 = tmp;
-	if (ft_strncmp(message, "ss", 2))
-		ft_putendl_fd(message, STDOUT_FILENO);
+	if (ft_strncmp(m, "ss", 2))
+		ft_putendl_fd(m, 1);
 }
 
-// ssをする関数
-void	swap_ab(t_stack *stack_a, t_stack *stack_b)
+void	swap_ab(t_stack *a, t_stack *b)
 {
-	swap(&stack_a->num[stack_a->top], &stack_a->num[stack_a->top - 1], "ss");
-	swap(&stack_b->num[stack_b->top], &stack_b->num[stack_b->top - 1], "ss");
-	ft_putendl_fd("ss", STDOUT_FILENO);
+	swap(&a->num[a->top], &a->num[a->top - 1], "ss");
+	swap(&b->num[b->top], &b->num[b->top - 1], "ss");
+	ft_putendl_fd("ss", 1);
 }
