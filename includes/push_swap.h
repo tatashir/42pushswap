@@ -6,7 +6,7 @@
 /*   By: tatashir <tatashir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/08 15:58:28 by tkirihar          #+#    #+#             */
-/*   Updated: 2023/06/07 16:00:14 by tatashir         ###   ########.fr       */
+/*   Updated: 2023/06/07 16:53:26 by tatashir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,10 +92,10 @@ void	restore_stack(t_stack *a, t_stack *b, ssize_t countra, ssize_t countrb);
 //init_count
 void	init_count(t_count *c);
 
-/* search_median */
-
-int		search_pivot(t_stack *stack, size_t sort_size, \
-int *pivot1, int *pivot2);
+// findpivot
+//static void	swap_lr(int *l, int *r);
+//static void	quick_sort(int *n, ssize_t l, ssize_t r);
+int		find_pivot(t_stack *s, size_t size, int *pivot1, int *pivot2);
 
 //cmd
 void	push(t_stack *a, t_stack *b, char *m);
