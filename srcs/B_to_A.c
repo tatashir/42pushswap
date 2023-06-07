@@ -6,7 +6,7 @@
 /*   By: tatashir <tatashir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/08 17:18:03 by tkirihar          #+#    #+#             */
-/*   Updated: 2023/06/07 16:47:09 by tatashir         ###   ########.fr       */
+/*   Updated: 2023/06/07 18:50:55 by tatashir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ void	B_to_A(size_t sort_size, t_stack *stack_b, t_stack *stack_a)
 	int		pivot2;
 	t_count	count;
 
-	if (check_sort_B_to_A(stack_a, stack_b, sort_size))
+	if (check_b_issorted(stack_a, stack_b, sort_size))
 		return ;
 	if (find_pivot(stack_b, sort_size, &pivot1, &pivot2))
 		error_exit(stack_a, stack_b);

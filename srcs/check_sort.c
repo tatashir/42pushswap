@@ -5,76 +5,71 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: tatashir <tatashir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/12 05:15:14 by tkirihar          #+#    #+#             */
-/*   Updated: 2023/06/07 17:53:57 by tatashir         ###   ########.fr       */
+/*   Created: 2023/05/23 18:56:13 by tatashir          #+#    #+#             */
+/*   Updated: 2023/06/07 18:52:44 by tatashir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-// スタックが昇順になっているか確認する関数
-bool	check_sort(t_stack *stack)
+bool	check_sort(t_stack *a)
 {
 	size_t	i;
 
 	i = 0;
-	while (i < stack->top - 1)
+	while (i < a->top - 1)
 	{
-		if (stack->num[stack->top - i] > stack->num[stack->top - (i + 1)])
+		if (a->num[a->top - (i + 1)] < a->num[a->top - i])
 			return (false);
 		i++;
 	}
 	return (true);
 }
 
-// sort_size分のスタックAが昇順になっているか確認する関数
-bool	check_sort_A_to_B(t_stack *stack, size_t sort_size)
+bool	check_aissorted(t_stack *s, size_t sortsize)
 {
 	size_t	i;
 
-	if (sort_size <= 3)
+	if (sortsize <= 3)
 	{
-		sort_stack_a(sort_size, stack);
+		sort_stack_a(sortsize, s);
 		return (true);
 	}
 	i = 0;
-	while (i < sort_size - 1)
+	while (i < sortsize - 1)
 	{
-		if (stack->num[stack->top - i] > stack->num[stack->top - (i + 1)])
+		if (s->num[s->top - (i + 1)] < s->num[s->top - i])
 			return (false);
 		i++;
 	}
 	return (true);
 }
 
-// スタックBからAにpush_size分pushする関数
-static void	push_B_to_A(t_stack *stack_b, t_stack *stack_a, size_t push_size)
+static void	pushto_a(t_stack *b, t_stack *a, size_t pushsize)
 {
-	while (push_size > 0)
+	while (0 < pushsize)
 	{
-		push(stack_a, stack_b, "pa");
-		push_size--;
+		push(a, b, "pa");
+		pushsize--;
 	}
 }
 
-// sort_size分のスタックBが降順になっているか確認し、なっていたらスタックAにpushする関数
-bool	check_sort_B_to_A(t_stack *stack_a, t_stack *stack_b, size_t sort_size)
+bool	check_b_issorted(t_stack *a, t_stack *b, size_t sortsize)
 {
 	size_t	i;
 
-	if (sort_size <= 3)
+	if (sortsize <= 3)
 	{
-		sort_stackbtoa(sort_size, stack_b, stack_a);
+		sort_stackbtoa(sortsize, b, a);
 		return (true);
 	}
 	i = 0;
-	while (i < sort_size - 1)
+	while (i < sortsize - 1)
 	{
-		if (stack_b->num[stack_b->top - i] < \
-			stack_b->num[stack_b->top - (i + 1)])
+		if (b->num[b->top - i] < b->num[b->top - (i + 1)])
 			return (false);
 		i++;
 	}
-	push_B_to_A(stack_b, stack_a, sort_size);
+	pushto_a(b, a, sortsize);
 	return (true);
 }
