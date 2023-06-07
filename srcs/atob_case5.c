@@ -6,10 +6,9 @@
 /*   By: tatashir <tatashir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/06 22:51:07 by tatashir          #+#    #+#             */
-/*   Updated: 2023/06/06 22:59:21 by tatashir         ###   ########.fr       */
+/*   Updated: 2023/06/07 18:06:55 by tatashir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include "../includes/push_swap.h"
 

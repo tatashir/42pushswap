@@ -6,7 +6,7 @@
 /*   By: tatashir <tatashir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/08 15:58:28 by tkirihar          #+#    #+#             */
-/*   Updated: 2023/06/07 16:53:26 by tatashir         ###   ########.fr       */
+/*   Updated: 2023/06/07 18:10:04 by tatashir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ typedef struct s_count
 bool	check_arg(int argc, char **argv);
 
 // initstack
-int		init_stack(t_stack *stack_a, t_stack *stack_b, int argc, char **argv);
+int		init_stack(t_stack *a, t_stack *b, int argc, char **argv);
 
 /* sort */
 
@@ -75,10 +75,9 @@ void	btoa_case6(t_stack *b, t_stack *a);
 
 void	B_to_A(size_t sort_size, t_stack *stack_b, t_stack *stack_a);
 
-/* short_sort */
-
-void	short_sort_A_to_B(size_t sort_size, t_stack *stack_a);
-void	short_sort_B_to_A(size_t sort_size, t_stack *stack_b, t_stack *stack_a);
+// sortsmall
+void	sort_stack_a(size_t size, t_stack *s);
+void	sort_stackbtoa(size_t size, t_stack *a, t_stack *b);
 
 /* check_sort */
 

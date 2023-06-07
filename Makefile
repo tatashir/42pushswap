@@ -6,7 +6,7 @@
 #    By: tatashir <tatashir@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/12/08 15:58:34 by tkirihar          #+#    #+#              #
-#    Updated: 2023/06/07 16:46:39 by tatashir         ###   ########.fr        #
+#    Updated: 2023/06/07 17:22:30 by tatashir         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -38,7 +38,7 @@ SRCS = 	./srcs/main.c \
 		./srcs/init_stack.c \
 		./srcs/restore_stack.c \
 		./srcs/find_pivot.c \
-		./srcs/short_sort.c \
+		./srcs/sort_smallsize.c \
 		./srcs/sort.c \
 		./srcs/sort_3elem.c
 

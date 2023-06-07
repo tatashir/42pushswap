@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   check_sort.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tkirihar <tkirihar@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*   By: tatashir <tatashir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/12 05:15:14 by tkirihar          #+#    #+#             */
-/*   Updated: 2021/12/18 00:30:06 by tkirihar         ###   ########.fr       */
+/*   Updated: 2023/06/07 17:53:57 by tatashir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ bool	check_sort_A_to_B(t_stack *stack, size_t sort_size)
 
 	if (sort_size <= 3)
 	{
-		short_sort_A_to_B(sort_size, stack);
+		sort_stack_a(sort_size, stack);
 		return (true);
 	}
 	i = 0;
@@ -64,7 +64,7 @@ bool	check_sort_B_to_A(t_stack *stack_a, t_stack *stack_b, size_t sort_size)
 
 	if (sort_size <= 3)
 	{
-		short_sort_B_to_A(sort_size, stack_b, stack_a);
+		sort_stackbtoa(sort_size, stack_b, stack_a);
 		return (true);
 	}
 	i = 0;
