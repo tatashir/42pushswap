@@ -5,63 +5,58 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: tatashir <tatashir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/08 15:58:21 by tkirihar          #+#    #+#             */
-/*   Updated: 2023/06/07 15:32:25 by tatashir         ###   ########.fr       */
+/*   Created: 2023/05/14 13:53:39 by tatashir          #+#    #+#             */
+/*   Updated: 2023/06/07 19:47:05 by tatashir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-// sort_sizeが3以下のソートを行う関数
-static void	short_sort(int sort_size, t_stack *stack_a)
+static void	sort_under3(int sortsize, t_stack *a)
 {
-	if (sort_size == 1)
+	if (sortsize == 1)
 		;
-	else if (sort_size == 2)
+	else if (sortsize == 2)
 	{
-		if (stack_a->num[stack_a->top] > stack_a->num[stack_a->top - 1])
-			swap(&stack_a->num[stack_a->top], &stack_a->num[stack_a->top - 1], \
-			"sa");
+		if (a->num[a->top] > a->num[a->top - 1])
+			swap(&a->num[a->top], &a->num[a->top - 1], "sa");
 	}
 	else
-		sort_3elem(stack_a);
+		sort_3elem(a);
 }
 
-// sort_sizeが4以上6以下のソートを行う関数
-static void	medium_sort(t_stack *stack_a, t_stack *stack_b)
+static void	sort_under6(t_stack *a, t_stack *b)
 {
 	size_t	min;
 
-	if (check_sort(stack_a))
+	if (check_sort(a))
 		return ;
-	while (stack_a->top > 3)
+	while (a->top > 3)
 	{
-		min = get_min(stack_a);
-		while (min != stack_a->top)
+		min = get_min(a);
+		while (min != a->top)
 		{
-			rotate(stack_a, "ra");
+			rotate(a, "ra");
 			min++;
 		}
-		push(stack_b, stack_a, "pb");
+		push(b, a, "pb");
 	}
-	sort_3elem(stack_a);
-	while (stack_b->top > 0)
-		push(stack_a, stack_b, "pa");
+	sort_3elem(a);
+	while (0 < b->top)
+		push(a, b, "pa");
 }
 
-// sort_sizeが7以上のソートを行う関数
-static void	long_sort(int sort_size, t_stack *stack_a, t_stack *stack_b)
+static void	sort_large(int sortsize, t_stack *a, t_stack *b)
 {
-	A_to_B((size_t)sort_size, stack_a, stack_b);
+	A_to_B((size_t)sortsize, a, b);
 }
 
-// sort_sizeに応じてソート処理を分ける関数
-void	sort(int sort_size, t_stack *stack_a, t_stack *stack_b)
+void	sort(int sortsize, t_stack *a, t_stack *b)
 {
-	if (sort_size <= 3)
-		short_sort(sort_size, stack_a);
-	else if (sort_size <= 6)
-		medium_sort(stack_a, stack_b);
+	if (sortsize <= 3)
+		sort_under3(sortsize, a);
+	else if (sortsize <= 6)
+		sort_under6(a, b);
 	else
-		long_sort(sort_size, stack_a, stack_b);
+		sort_large(sortsize, a, b);
 }
