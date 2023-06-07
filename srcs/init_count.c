@@ -3,20 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   init_count.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tkirihar <tkirihar@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*   By: tatashir <tatashir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/12 03:51:02 by tkirihar          #+#    #+#             */
-/*   Updated: 2021/12/18 01:14:54 by tkirihar         ###   ########.fr       */
+/*   Created: 2023/06/02 21:53:39 by tatashir          #+#    #+#             */
+/*   Updated: 2023/06/07 15:35:25 by tatashir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-// t_countを初期化する関数
-void	init_count(t_count *count)
+void	init_count(t_count *c)
 {
-	count->ra = 0;
-	count->rb = 0;
-	count->pa = 0;
-	count->pb = 0;
+	c->ra = 0;
+	c->rb = 0;
+	c->pa = 0;
+	c->pb = 0;
 }
