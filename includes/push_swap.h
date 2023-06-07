@@ -6,7 +6,7 @@
 /*   By: tatashir <tatashir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/08 15:58:28 by tkirihar          #+#    #+#             */
-/*   Updated: 2023/06/07 19:50:14 by tatashir         ###   ########.fr       */
+/*   Updated: 2023/06/07 19:54:12 by tatashir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,9 +56,8 @@ bool	check_3sort(int s, int m, int l);
 // getmin
 size_t	get_min(t_stack *a);
 
-/* A_to_B */
-
-void	A_to_B(size_t sort_size, t_stack *stack_a, t_stack *stack_b);
+// fromatob
+void	fromatob(size_t size, t_stack *a, t_stack *b);
 
 // atob,btoa
 void	atob_case1(t_stack *s, size_t n1, size_t n2);

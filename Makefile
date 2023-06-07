@@ -6,7 +6,7 @@
 #    By: tatashir <tatashir@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/12/08 15:58:34 by tkirihar          #+#    #+#              #
-#    Updated: 2023/06/07 17:22:30 by tatashir         ###   ########.fr        #
+#    Updated: 2023/06/07 19:53:43 by tatashir         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,7 @@ SRCS = 	./srcs/main.c \
 		./srcs/atob_case3.c\
 		./srcs/atob_case4.c\
 		./srcs/atob_case5.c\
-		./srcs/A_to_B.c \
+		./srcs/fromAtoB.c \
 		./srcs/B_to_A.c \
 		./srcs/btoa_case1.c\
 		./srcs/btoa_case2.c\

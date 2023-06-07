@@ -6,7 +6,7 @@
 /*   By: tatashir <tatashir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/14 13:53:39 by tatashir          #+#    #+#             */
-/*   Updated: 2023/06/07 19:47:05 by tatashir         ###   ########.fr       */
+/*   Updated: 2023/06/07 19:55:13 by tatashir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ static void	sort_under6(t_stack *a, t_stack *b)
 
 static void	sort_large(int sortsize, t_stack *a, t_stack *b)
 {
-	A_to_B((size_t)sortsize, a, b);
+	fromatob((size_t)sortsize, a, b);
 }
 
 void	sort(int sortsize, t_stack *a, t_stack *b)
