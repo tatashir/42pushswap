@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tatashir <tatashir@student.42.fr>          +#+  +:+       +#+        */
+/*   By: taichi <taichi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/23 15:36:44 by tatashir          #+#    #+#             */
-/*   Updated: 2023/06/08 18:26:48 by tatashir         ###   ########.fr       */
+/*   Updated: 2023/06/16 20:16:01 by taichi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,12 +22,20 @@ int	main(int argc, char **argv)
 		ft_putendl_fd("Error", 1);
 		exit (1);
 	}
-	if (init_stack(&a, &b, argc, argv))
+
+	//newargc, newargv
+	int newargc;
+	char **newargv;
+
+	newargc = 3;
+	
+
+	if (init_stack(&a, &b, newargc, newargv))
 	{
 		ft_putendl_fd("Error", 2);
 		exit (1);
 	}
-	sort(argc - 1, &a, &b);
+	sort(newargc - 1, &a, &b);
 	free(a.num);
 	free(b.num);
 	return (0);
